@@ -1,0 +1,17 @@
+
+<div class="container-fluid d-flex flex-wrap my-2">
+  <div class="card col-sm-12 col-md-4 col-lg-3" style="width: 18rem;" *ngFor="let music of arrayOfMusic">
+    <img src="{{music.image[3]['#text']}}"class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{music.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Artist : {{music.artist}}</li>
+      <li class="list-group-item">Listeners : {{music.listeners}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="{{music.url}}" class="btn btn-outline-success mx-2">Play</a>
+      <button class="btn btn-outline-primary mx-2" (click)="addToFavs(music)">Add to favourite</button>
+    </div>
+  </div>
+</div>

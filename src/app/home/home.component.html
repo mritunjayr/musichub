@@ -1,0 +1,31 @@
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Music is like dream.</h1>
+    <form #formid="ngForm" (ngSubmit)='search(text.value)' class="form-inline" >
+      <input type="text" class="form-control col-sm-12 text-center" id="text" #text placeholder="Search for dream">
+      <button type="submit" class="form-control btn" (click)="search(text.value)" routerLink="/result"  ></button>
+    </form>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+
+<div class="container-fluid">
+<h2>Trending Music</h2>
+<div class="container-fluid d-flex flex-wrap my-2">
+  <div class="card col-sm-12 col-md-4 col-lg-3" style="width: 18rem;" *ngFor="let music of arrayOfMusic">
+    <img src="{{music.image[3]['#text']}}"class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{music.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Artist : {{music.artist.name}}</li>
+      <li class="list-group-item">Listeners : {{music.listeners}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="{{music.url}}" class="btn btn-outline-success mx-2">Play</a>
+      <button class="btn btn-outline-primary mx-2" (click)="addToFavs(music)">Add to favourite</button>
+    </div>
+  </div>
+</div>
+</div>
