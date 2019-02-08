@@ -10,7 +10,7 @@
       <li class="list-group-item">Listeners : {{music.listeners}}</li>
     </ul>
     <div class="card-body">
-      <a href="{{music.url}}" class="btn btn-outline-success mx-2">Play</a>
+      <a  class="btn btn-outline-success mx-2" (click)='showDetail(music)'>Details</a>
       <button class="btn btn-outline-primary mx-2" (click)="addToFavs(music)">Add to favourite</button>
     </div>
   </div>

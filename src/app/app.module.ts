@@ -10,13 +10,15 @@ import {MusicService} from './music.service'
 import { HttpClientModule }    from '@angular/common/http';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { FavouriteComponent } from './favourite/favourite.component';
+import { MusicDetailsComponent } from './music-details/music-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HomeComponent,
     SearchResultComponent,
-    FavouriteComponent
+    FavouriteComponent,
+    MusicDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,10 @@
 import { Component, OnInit} from '@angular/core';
 import {MusicService} from '../music.service';
 import {Subscription} from 'rxjs';
+
+import { ActivatedRoute,Router } from '@angular/router';
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-search-result',
   templateUrl: './search-result.component.html',
@@ -8,17 +12,34 @@ import {Subscription} from 'rxjs';
 })
 export class SearchResultComponent implements OnInit {
   
-  constructor(private musicService:MusicService) { }
+  constructor(private musicService:MusicService, private route: ActivatedRoute,private location: Location,
+    private router:Router) { }
   arrayOfMusic:any=[];
   ngOnInit() {
-    
-   this.musicService.getMusic('ss')
-     .subscribe(data => {
-       this.arrayOfMusic=data.results.trackmatches.track;
-       console.log(this.arrayOfMusic);
 
+    this.getMusic();
+   
+  }
+  getMusic(): void {
+
+      const search = this.route.snapshot.paramMap.get('id');
+       this.musicService.getMusic(search).subscribe(data => {
+       this.arrayOfMusic=data.results.trackmatches.track;
+      //  console.log(this.arrayOfMusic);
+      
     });
-   ;
+  }
+ 
+  goBack(): void {
+    this.location.back();
+  }
+  addToFavs(music){
+    this.musicService.setFavouriteMusic(music);
+      console.log([music]);
+  }
+  showDetail(music){
+      this.musicService.setDetailsMusic(music);
+      this.router.navigateByUrl('/details/'+music.name);
   }
 
 }

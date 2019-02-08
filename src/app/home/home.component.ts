@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MusicService} from '../music.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,10 @@ import {MusicService} from '../music.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  value:string;
-  constructor(private musicService:MusicService) { }
+
+
+  
+  constructor(private musicService:MusicService ,private route :Router) { }
   arrayOfMusic:any=[];
   ngOnInit() {
       this.musicService.getTrendMusic().subscribe(data=>
@@ -17,10 +20,14 @@ export class HomeComponent implements OnInit {
             this.arrayOfMusic=data.tracks.track;
         });
   }
-
-  search(value){
-    console.log(value);
-    this.musicService.announceMission(value);
+  click(value){
+    this.route.navigateByUrl("/result/"+value);
   }
-
+  showDetail(music){
+    this.musicService.setDetailsMusicTrend(music);
+    this.route.navigateByUrl("/details/"+music.name);
+  }
+  addToFavsfromTrend(music){
+    this.musicService.setFavouriteMusicTrends(music);
+  }
 }
