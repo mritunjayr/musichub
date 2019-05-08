@@ -35,7 +35,7 @@ export class SearchResultComponent implements OnInit {
   }
   addToFavs(music){
     this.musicService.setFavouriteMusic(music);
-      console.log([music]);
+      // console.log([music]);
   }
   showDetail(music){
       this.musicService.setDetailsMusic(music);

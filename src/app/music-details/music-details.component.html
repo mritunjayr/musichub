@@ -10,6 +10,10 @@
     <div class="card-body col-12">
       <button class="btn btn-outline-primary mx-2" (click)="addToFavFromSearch(music.music)">Add to Favourite</button>
     </div>
+    <div *ngIf="flag" class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>Aww yeah, you successfully  add to your favourite list of track.</p>
+    </div>
   </div>
   </div>
 
@@ -28,8 +32,13 @@
   <div class="card-body col-12">
     <button class="btn btn-outline-primary mx-2" (click)="addToFavFromTrend(music.music)">Add to Favourite</button>
   </div>
+  <div *ngIf="flag" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully  add to your favourite list of track.</p>
+  </div>
 </div>
 </div>
+
 <div class="container-fluid d-flex flex-wrap my-2" *ngFor="let music of musiclistFavSearch">
   <img src="{{music.music.image[3]['#text']}}"class="col-6" alt="...">
   <div class="col-6">
@@ -41,6 +50,10 @@
   
   <div class="card-body col-12">
     <button class="btn btn-outline-primary mx-2" (click)="removeFromFavSearch(music)">Remove from Favourite</button>
+  </div>
+  <div *ngIf="flag" class="alert alert-success col-12" role="alert">
+    <h4 class="alert-heading">Success !</h4>
+    <p>Aww yeah, you successfully  remove from your favourite list of track.</p>
   </div>
 </div>
 </div>
@@ -60,5 +73,14 @@
 <div class="card-body col-12">
   <button class="btn btn-outline-primary mx-2" (click)="removeFromFavTrend(music)">Remove from Favourite</button>
 </div>
+
+<div *ngIf="flag" class="alert alert-success col-12" role="alert">
+  <h4 class="alert-heading">Success !</h4>
+  <p>Aww yeah, you successfully  remove from your favourite list of track.</p>
+</div>
+
+
 </div>
 </div>
+
+
