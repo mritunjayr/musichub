@@ -8,7 +8,3 @@ enabled = true
   trusted_registries = [
     "docker.io"
   ]
-exclude_patterns = [
-  "**/node_modules/"
-
-]
