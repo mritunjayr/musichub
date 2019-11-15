@@ -1,0 +1,14 @@
+version = 1
+
+[[analyzers]]
+name = "dockerfile"
+enabled = true
+
+  [analyzers.meta]
+  trusted_registries = [
+    "docker.io"
+  ]
+exclude_patterns = [
+  "**/node_modules/"
+
+]
