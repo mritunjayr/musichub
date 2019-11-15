@@ -4,7 +4,7 @@
     <form #formid="ngForm"  class="form-inline" >
       <input type="text" class="form-control col-sm-12 text-center"  #text id="text" placeholder="Search For Dream" >
       <!-- <a routerLink="/result/{{textValue}}"> -->
-        <button type="submit" class="form-control btn nav-link" (click)='click(text.value)'></button>
+        <button type="submit" class="form-control btn nav-link" (click)='searchMusic(text.value)'></button>
       <!-- </a> -->
     </form>
     <!-- routerLink="/result/{{text.value}} -->
@@ -17,12 +17,12 @@
 <h2>Trending Music</h2>
 <div class="container-fluid d-flex flex-wrap my-2">
   <div class="card col-sm-12 col-md-4 col-lg-3" style="width: 18rem;" *ngFor="let music of arrayOfMusic">
-    <img src="{{music.image[3]['#text']}}"class="card-img-top" alt="...">
+    <img src="{{music.image}}"class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{music.name}}</h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Artist : {{music.artist.name}}</li>
+      <li class="list-group-item">Artist : {{music.artistName}}</li>
       <li class="list-group-item">Listeners : {{music.listeners}}</li>
     </ul>
     <div class="card-body">

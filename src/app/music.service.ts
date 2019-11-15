@@ -18,7 +18,7 @@ export class MusicService {
   url: string='http://localhost:3004/posts';
 
   getTrendMusic():any{
-    return this.http.get("http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=34c0d1d6c0886560e6fd3c2e0ebc55c2&format=json");
+    return this.http.get("http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=india&api_key=34c0d1d6c0886560e6fd3c2e0ebc55c2&format=json");
   }
 
   getMusic(value):any{
