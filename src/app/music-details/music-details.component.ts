@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MusicService } from "../music.service";
-import { routerNgProbeToken } from "@angular/router/src/router_module";
+
 @Component({
   selector: "app-music-details",
   templateUrl: "./music-details.component.html",

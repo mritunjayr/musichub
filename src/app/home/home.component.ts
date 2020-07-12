@@ -50,4 +50,7 @@ export class HomeComponent implements OnInit {
   addToFavsfromTrend(music){
     this.musicService.setFavouriteMusicTrends(music);
   }
+  searchMusic(name){
+    
+  }
 }
