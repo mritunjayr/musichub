@@ -1,7 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {MusicService} from '../music.service';
-import {Subscription} from 'rxjs';
-
+import {MusicService} from '../services/music.service';
 import { ActivatedRoute,Router } from '@angular/router';
 import { Location } from '@angular/common';
 

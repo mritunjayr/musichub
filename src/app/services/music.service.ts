@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
-import {Subject} from 'rxjs';
-
+import {environment} from '../../environments/environment';
 
 
 @Injectable({
@@ -10,7 +8,7 @@ import {Subject} from 'rxjs';
 })
 export class MusicService {
 
-  api_key: string=  null;
+  api_key: string=  environment.LAST_FM_API ;
   constructor(private http:HttpClient) { }
 
   url: string='http://localhost:3004/posts';
