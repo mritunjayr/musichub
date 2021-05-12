@@ -10,19 +10,17 @@ import {Subject} from 'rxjs';
 })
 export class MusicService {
 
-   
- 
-
+  api_key: string=  null;
   constructor(private http:HttpClient) { }
 
   url: string='http://localhost:3004/posts';
 
   getTrendMusic():any{
-    return this.http.get("http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=india&api_key=34c0d1d6c0886560e6fd3c2e0ebc55c2&format=json");
+    return this.http.get(`http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=india&api_key=${this.api_key}&format=json`);
   }
 
   getMusic(value):any{
-    var url=`http://ws.audioscrobbler.com/2.0/?method=track.search&api_key=34c0d1d6c0886560e6fd3c2e0ebc55c2&track=${value}&format=json`;
+    var url=`http://ws.audioscrobbler.com/2.0/?method=track.search&api_key=${this.api_key}&track=${value}&format=json`;
     return this.http.get(url);
   }
 
