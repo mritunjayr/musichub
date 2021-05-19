@@ -1,56 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import {MusicService} from '../services/music.service';
-import { Router } from '@angular/router';
-
-class Music{
-  artistName:string;
-  image:string;
-  name:string;
-  listeners:string;
-  url:string;
-}
+import { Component, OnInit } from "@angular/core";
+import { MusicService } from "../services/music.service";
+import { Router } from "@angular/router";
+import { Music } from "../data/module";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  arrayOfMusic:any=[];
-  music:Music;
-  constructor(private musicService:MusicService ,private route :Router) { }
-  
+  arrayOfMusic: Music[] = [];
+  constructor(private musicService: MusicService, private route: Router) {}
+
   ngOnInit() {
-      this.musicService.getTrendMusic().subscribe(data=>
-        {
-            console.log(data.tracks.track);
-            // this.arrayOfMusic=data.tracks.track
-            var result:any
-            result=data.tracks.track.map(data=>{
-            this.music=new Music();
-            this.music.artistName=data.artist.name
-            this.music.image=data.image[1]["#text"]
-            this.music.name=data.name
-            this.music.listeners=data.listeners
-            this.music.url=data.url
-            return this.music;
-        });
-        this.arrayOfMusic=result
-        console.log(result)
+    this.musicService.getTrendMusic().subscribe((data) => {
+      data.tracks.track.forEach((track) => {
+        let data: Music = {
+          artistName: track.artist.name,
+          image: track.image[1]["#text"],
+          name: track.name,
+          listeners: track.listeners,
+          url: track.url,
+          durations: track.durations,
+        };
+        this.arrayOfMusic.push(data);
       });
+    });
   }
 
-  click(value){
-    this.route.navigateByUrl("/result/"+value);
+  click(value) {
+    this.route.navigateByUrl("/result/" + value);
   }
-  showDetail(music){
+  showDetail(music: Music) {
     this.musicService.setDetailsMusicTrend(music);
-    this.route.navigateByUrl("/details/"+music.name);
+    this.route.navigateByUrl("/details/" + music.name);
   }
-  addToFavsfromTrend(music){
+  addToFavsfromTrend(music: Music) {
     this.musicService.setFavouriteMusicTrends(music);
   }
-  searchMusic(name){
-    
-  }
+  searchMusic(name) {}
 }

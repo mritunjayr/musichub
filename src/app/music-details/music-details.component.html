@@ -1,86 +1,39 @@
-<div class="container-fluid d-flex flex-wrap my-2" *ngFor="let music of musiclistSearch">
-    <img src="{{music.music.image[3]['#text']}}"class="col-6" alt="...">
-    <div class="col-6">
-        <h2 class="col-12">Name of Track : {{music.music.name}}</h2>
-    
-    
-        <h2 class="col-12">Artist : {{music.music.artist}}</h2>
-        <h2>Listeners : {{music.music.listeners}}</h2>
-    
+<div
+  class="container-fluid d-flex flex-wrap my-2"
+  *ngFor="let music of musicList$"
+>
+  <img src="{{ music.image }}" class="col-6" alt="..." />
+  <div class="col-6">
+    <h2 class="col-12">Name of Track : {{ music.name }}</h2>
+
+    <h2 class="col-12">Artist : {{ music.artistName }}</h2>
+    <h2>Listeners : {{ music.listeners }}</h2>
+
     <div class="card-body col-12">
-      <button class="btn btn-outline-primary mx-2" (click)="addToFavFromSearch(music.music)">Add to Favourite</button>
+      <button
+        class="btn btn-outline-primary mx-2"
+        (click)="addToFavFromSearch(music)"
+      >
+        Add to Favourite
+      </button>
     </div>
     <div *ngIf="flag" class="alert alert-success" role="alert">
       <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully  add to your favourite list of track.</p>
+      <p>Aww yeah, you successfully add to your favourite list of track.</p>
+    </div>
+    <div class="card-body col-12">
+      <button
+        class="btn btn-outline-primary mx-2"
+        (click)="removeFromFavSearch(music)"
+      >
+        Remove from Favourite
+      </button>
+    </div>
+    <div *ngIf="flag" class="alert alert-success col-12" role="alert">
+      <h4 class="alert-heading">Success !</h4>
+      <p>
+        Aww yeah, you successfully remove from your favourite list of track.
+      </p>
     </div>
   </div>
-  </div>
-
-
-
-
-<div class="container-fluid d-flex flex-wrap my-2" *ngFor="let music of musiclistTrend">
-  <img src="{{music.music.image[3]['#text']}}"class="col-6" alt="...">
-  <div class="col-6">
-      <h2 class="col-12">Name of Track : {{music.music.name}}</h2>
-  
-  
-      <h2 class="col-12">Artist : {{music.music.artist.name}}</h2>
-      <h2>Listeners : {{music.music.listeners}}</h2>
-  
-  <div class="card-body col-12">
-    <button class="btn btn-outline-primary mx-2" (click)="addToFavFromTrend(music.music)">Add to Favourite</button>
-  </div>
-  <div *ngIf="flag" class="alert alert-success" role="alert">
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, you successfully  add to your favourite list of track.</p>
-  </div>
 </div>
-</div>
-
-<div class="container-fluid d-flex flex-wrap my-2" *ngFor="let music of musiclistFavSearch">
-  <img src="{{music.music.image[3]['#text']}}"class="col-6" alt="...">
-  <div class="col-6">
-      <h2 class="col-12">Name of Track : {{music.music.name}}</h2>
-  
-  
-      <h2 class="col-12">Artist : {{music.music.artist}}</h2>
-      <h2>Listeners : {{music.music.listeners}}</h2>
-  
-  <div class="card-body col-12">
-    <button class="btn btn-outline-primary mx-2" (click)="removeFromFavSearch(music)">Remove from Favourite</button>
-  </div>
-  <div *ngIf="flag" class="alert alert-success col-12" role="alert">
-    <h4 class="alert-heading">Success !</h4>
-    <p>Aww yeah, you successfully  remove from your favourite list of track.</p>
-  </div>
-</div>
-</div>
-
-
-
-
-<div class="container-fluid d-flex flex-wrap my-2" *ngFor="let music of musiclistFavTrend">
-<img src="{{music.music.image[3]['#text']}}"class="col-6" alt="...">
-<div class="col-6">
-    <h2 class="col-12">Name of Track : {{music.music.name}}</h2>
-
-
-    <h2 class="col-12">Artist : {{music.music.artist.name}}</h2>
-    <h2>Listeners : {{music.music.listeners}}</h2>
-
-<div class="card-body col-12">
-  <button class="btn btn-outline-primary mx-2" (click)="removeFromFavTrend(music)">Remove from Favourite</button>
-</div>
-
-<div *ngIf="flag" class="alert alert-success col-12" role="alert">
-  <h4 class="alert-heading">Success !</h4>
-  <p>Aww yeah, you successfully  remove from your favourite list of track.</p>
-</div>
-
-
-</div>
-</div>
-
-
