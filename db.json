@@ -1,215 +1,435 @@
 {
-  "posts": [
+  "tracks": [
     {
-      "music": {
-        "name": "Lovework",
-        "artist": "Black Light Smoke",
-        "url": "https://www.last.fm/music/Black+Light+Smoke/_/Lovework",
-        "streamable": "FIXME",
-        "listeners": "2968",
-        "image": [
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/7a34e35f2b2c1f239682061ca53b3886.png",
-            "size": "small"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/7a34e35f2b2c1f239682061ca53b3886.png",
-            "size": "medium"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/7a34e35f2b2c1f239682061ca53b3886.png",
-            "size": "large"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/7a34e35f2b2c1f239682061ca53b3886.png",
-            "size": "extralarge"
-          }
-        ],
-        "mbid": ""
-      },
-      "id": 1
+      "id": 1,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "The Scientist",
+      "listeners": "1780974",
+      "url": "https://www.last.fm/music/Coldplay/_/The+Scientist"
     },
     {
-      "music": {
-        "name": "LoveWave",
-        "artist": "Iveta Mukuchyan",
-        "url": "https://www.last.fm/music/Iveta+Mukuchyan/_/LoveWave",
-        "streamable": "FIXME",
-        "listeners": "1962",
-        "image": [
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "small"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "medium"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "large"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "extralarge"
-          }
-        ],
-        "mbid": ""
-      },
-      "id": 2
+      "id": 2,
+      "name": "Yellow",
+      "artistName": "Coldplay",
+      "listeners": "1766219",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "url": "https://www.last.fm/music/Coldplay/_/Yellow",
+      "favourite": true
     },
     {
-      "music": {
-        "name": "LoveWave - Eurovision 2016 - Armenia",
-        "artist": "Iveta Mukuchyan",
-        "url": "https://www.last.fm/music/Iveta+Mukuchyan/_/LoveWave+-+Eurovision+2016+-+Armenia",
-        "streamable": "FIXME",
-        "listeners": "5098",
-        "image": [
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "small"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "medium"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "large"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/021ade3ef9629fdd90bb9d300bc38b93.png",
-            "size": "extralarge"
-          }
-        ],
-        "mbid": ""
-      },
-      "id": 3
-    }
-  ],
-  "comments": [],
-  "details": [],
-  "trends": [
-    {
-      "music": {
-        "name": "Nasa",
-        "duration": "0",
-        "playcount": "707046",
-        "listeners": "78950",
-        "mbid": "",
-        "url": "https://www.last.fm/music/Ariana+Grande/_/Nasa",
-        "streamable": {
-          "#text": "0",
-          "fulltrack": "0"
-        },
-        "artist": {
-          "name": "Ariana Grande",
-          "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-          "url": "https://www.last.fm/music/Ariana+Grande"
-        },
-        "image": [
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "small"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "medium"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "large"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "extralarge"
-          }
-        ]
-      },
-      "id": 1
+      "id": 3,
+      "artistName": "Pink Floyd",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Wish You Were Here",
+      "listeners": "1220265",
+      "url": "https://www.last.fm/music/Pink+Floyd/_/Wish+You+Were+Here",
+      "favourite": true
     },
     {
-      "music": {
-        "name": "Bloodline",
-        "duration": "0",
-        "playcount": "753526",
-        "listeners": "77751",
-        "mbid": "",
-        "url": "https://www.last.fm/music/Ariana+Grande/_/Bloodline",
-        "streamable": {
-          "#text": "0",
-          "fulltrack": "0"
-        },
-        "artist": {
-          "name": "Ariana Grande",
-          "mbid": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-          "url": "https://www.last.fm/music/Ariana+Grande"
-        },
-        "image": [
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "small"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "medium"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "large"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/6a5724bbcd4136c35f57e30ba681a9f3.png",
-            "size": "extralarge"
-          }
-        ]
-      },
-      "id": 2
+      "id": 4,
+      "artistName": "Pink Floyd",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Comfortably Numb",
+      "listeners": "1003792",
+      "url": "https://www.last.fm/music/Pink+Floyd/_/Comfortably+Numb",
+      "favourite": false
     },
     {
-      "music": {
-        "name": "bury a friend",
-        "duration": "0",
-        "playcount": "535137",
-        "listeners": "75914",
-        "mbid": "",
-        "url": "https://www.last.fm/music/Billie+Eilish/_/bury+a+friend",
-        "streamable": {
-          "#text": "0",
-          "fulltrack": "0"
-        },
-        "artist": {
-          "name": "Billie Eilish",
-          "mbid": "",
-          "url": "https://www.last.fm/music/Billie+Eilish"
-        },
-        "image": [
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/5dda1e196292bec1c30eb51ce148cace.png",
-            "size": "small"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/5dda1e196292bec1c30eb51ce148cace.png",
-            "size": "medium"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/5dda1e196292bec1c30eb51ce148cace.png",
-            "size": "large"
-          },
-          {
-            "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/5dda1e196292bec1c30eb51ce148cace.png",
-            "size": "extralarge"
-          }
-        ]
-      },
-      "id": 3
+      "id": 5,
+      "artistName": "Nirvana",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Smells Like Teen Spirit",
+      "listeners": "2314413",
+      "url": "https://www.last.fm/music/Nirvana/_/Smells+Like+Teen+Spirit"
+    },
+    {
+      "id": 6,
+      "artistName": "Ed Sheeran",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Shape of You",
+      "listeners": "554359",
+      "url": "https://www.last.fm/music/Ed+Sheeran/_/Shape+of+You"
+    },
+    {
+      "id": 7,
+      "artistName": "Linkin Park",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "In the End",
+      "listeners": "1598271",
+      "url": "https://www.last.fm/music/Linkin+Park/_/In+the+End"
+    },
+    {
+      "id": 8,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Fix You",
+      "listeners": "1644936",
+      "url": "https://www.last.fm/music/Coldplay/_/Fix+You"
+    },
+    {
+      "id": 9,
+      "artistName": "Guns N' Roses",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Sweet Child o' Mine",
+      "listeners": "1525590",
+      "url": "https://www.last.fm/music/Guns+N%27+Roses/_/Sweet+Child+o%27+Mine"
+    },
+    {
+      "id": 10,
+      "artistName": "Dire Straits",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Sultans of Swing",
+      "listeners": "1171139",
+      "url": "https://www.last.fm/music/Dire+Straits/_/Sultans+of+Swing"
+    },
+    {
+      "id": 11,
+      "artistName": "Radiohead",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Creep",
+      "listeners": "1858497",
+      "url": "https://www.last.fm/music/Radiohead/_/Creep"
+    },
+    {
+      "id": 12,
+      "artistName": "Arctic Monkeys",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Do I Wanna Know?",
+      "listeners": "1176494",
+      "url": "https://www.last.fm/music/Arctic+Monkeys/_/Do+I+Wanna+Know%3F"
+    },
+    {
+      "id": 13,
+      "artistName": "Red Hot Chili Peppers",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Californication",
+      "listeners": "1780117",
+      "url": "https://www.last.fm/music/Red+Hot+Chili+Peppers/_/Californication"
+    },
+    {
+      "id": 14,
+      "artistName": "Led Zeppelin",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Stairway to Heaven",
+      "listeners": "1312850",
+      "url": "https://www.last.fm/music/Led+Zeppelin/_/Stairway+to+Heaven"
+    },
+    {
+      "id": 15,
+      "artistName": "Linkin Park",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Numb",
+      "listeners": "1450892",
+      "url": "https://www.last.fm/music/Linkin+Park/_/Numb"
+    },
+    {
+      "id": 16,
+      "artistName": "Metallica",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Nothing Else Matters",
+      "listeners": "1224754",
+      "url": "https://www.last.fm/music/Metallica/_/Nothing+Else+Matters"
+    },
+    {
+      "id": 17,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Paradise",
+      "listeners": "1031466",
+      "url": "https://www.last.fm/music/Coldplay/_/Paradise"
+    },
+    {
+      "id": 18,
+      "artistName": "The White Stripes",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Seven Nation Army",
+      "listeners": "1697369",
+      "url": "https://www.last.fm/music/The+White+Stripes/_/Seven+Nation+Army"
+    },
+    {
+      "id": 19,
+      "artistName": "The Weeknd",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Can't Feel My Face",
+      "listeners": "655453",
+      "url": "https://www.last.fm/music/The+Weeknd/_/Can%27t+Feel+My+Face"
+    },
+    {
+      "id": 20,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Hymn for the Weekend",
+      "listeners": "374683",
+      "url": "https://www.last.fm/music/Coldplay/_/Hymn+for+the+Weekend"
+    },
+    {
+      "id": 21,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Viva la Vida",
+      "listeners": "1820435",
+      "url": "https://www.last.fm/music/Coldplay/_/Viva+la+Vida"
+    },
+    {
+      "id": 22,
+      "artistName": "Nirvana",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Come as You Are",
+      "listeners": "2037186",
+      "url": "https://www.last.fm/music/Nirvana/_/Come+as+You+Are"
+    },
+    {
+      "id": 23,
+      "artistName": "Imagine Dragons",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Radioactive",
+      "listeners": "1169841",
+      "url": "https://www.last.fm/music/Imagine+Dragons/_/Radioactive"
+    },
+    {
+      "id": 24,
+      "artistName": "Sia",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Cheap Thrills",
+      "listeners": "489683",
+      "url": "https://www.last.fm/music/Sia/_/Cheap+Thrills"
+    },
+    {
+      "id": 25,
+      "artistName": "Adele",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Hello",
+      "listeners": "525274",
+      "url": "https://www.last.fm/music/Adele/_/Hello"
+    },
+    {
+      "id": 26,
+      "artistName": "Metallica",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Enter Sandman",
+      "listeners": "1256083",
+      "url": "https://www.last.fm/music/Metallica/_/Enter+Sandman"
+    },
+    {
+      "id": 27,
+      "artistName": "The xx",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Intro",
+      "listeners": "1201642",
+      "url": "https://www.last.fm/music/The+xx/_/Intro"
+    },
+    {
+      "id": 28,
+      "artistName": "AC/DC",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Back in Black",
+      "listeners": "1258290",
+      "url": "https://www.last.fm/music/AC%2FDC/_/Back+in+Black"
+    },
+    {
+      "id": 29,
+      "artistName": "Radiohead",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Karma Police",
+      "listeners": "1799303",
+      "url": "https://www.last.fm/music/Radiohead/_/Karma+Police"
+    },
+    {
+      "id": 30,
+      "artistName": "The Verve",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Bitter Sweet Symphony",
+      "listeners": "1301803",
+      "url": "https://www.last.fm/music/The+Verve/_/Bitter+Sweet+Symphony"
+    },
+    {
+      "id": 31,
+      "artistName": "Adele",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Rolling in the Deep",
+      "listeners": "1421163",
+      "url": "https://www.last.fm/music/Adele/_/Rolling+in+the+Deep"
+    },
+    {
+      "id": 32,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Clocks",
+      "listeners": "1723064",
+      "url": "https://www.last.fm/music/Coldplay/_/Clocks"
+    },
+    {
+      "id": 33,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Adventure Of A Lifetime",
+      "listeners": "380917",
+      "url": "https://www.last.fm/music/Coldplay/_/Adventure+Of+A+Lifetime"
+    },
+    {
+      "id": 34,
+      "artistName": "OneRepublic",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Counting Stars",
+      "listeners": "808019",
+      "url": "https://www.last.fm/music/OneRepublic/_/Counting+Stars"
+    },
+    {
+      "id": 36,
+      "artistName": "Passenger",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Let Her Go",
+      "listeners": "814250",
+      "url": "https://www.last.fm/music/Passenger/_/Let+Her+Go"
+    },
+    {
+      "id": 37,
+      "artistName": "Aerosmith",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Dream On",
+      "listeners": "1096070",
+      "url": "https://www.last.fm/music/Aerosmith/_/Dream+On"
+    },
+    {
+      "id": 38,
+      "artistName": "Coldplay",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "A Sky Full of Stars",
+      "listeners": "587724",
+      "url": "https://www.last.fm/music/Coldplay/_/A+Sky+Full+of+Stars"
+    },
+    {
+      "id": 39,
+      "artistName": "Foster the People",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Pumped Up Kicks",
+      "listeners": "1469209",
+      "url": "https://www.last.fm/music/Foster+the+People/_/Pumped+Up+Kicks"
+    },
+    {
+      "id": 40,
+      "artistName": "Tame Impala",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "The Less I Know the Better",
+      "listeners": "769167",
+      "url": "https://www.last.fm/music/Tame+Impala/_/The+Less+I+Know+the+Better"
+    },
+    {
+      "id": 41,
+      "artistName": "Guns N' Roses",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "November Rain",
+      "listeners": "1068392",
+      "url": "https://www.last.fm/music/Guns+N%27+Roses/_/November+Rain"
+    },
+    {
+      "id": 42,
+      "artistName": "Red Hot Chili Peppers",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Under the Bridge",
+      "listeners": "1696754",
+      "url": "https://www.last.fm/music/Red+Hot+Chili+Peppers/_/Under+the+Bridge"
+    },
+    {
+      "id": 43,
+      "artistName": "Queen",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Bohemian Rhapsody",
+      "listeners": "1449911",
+      "url": "https://www.last.fm/music/Queen/_/Bohemian+Rhapsody"
+    },
+    {
+      "id": 44,
+      "artistName": "Massive Attack",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Teardrop",
+      "listeners": "1392062",
+      "url": "https://www.last.fm/music/Massive+Attack/_/Teardrop"
+    },
+    {
+      "id": 45,
+      "artistName": "The Who",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Baba O'Riley",
+      "listeners": "1000862",
+      "url": "https://www.last.fm/music/The+Who/_/Baba+O%27Riley"
+    },
+    {
+      "id": 46,
+      "artistName": "Pink Floyd",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Time",
+      "listeners": "959361",
+      "url": "https://www.last.fm/music/Pink+Floyd/_/Time"
+    },
+    {
+      "id": 47,
+      "artistName": "Pink Floyd",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Money",
+      "listeners": "1043669",
+      "url": "https://www.last.fm/music/Pink+Floyd/_/Money"
+    },
+    {
+      "id": 35,
+      "artistName": "AC/DC",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Highway to Hell",
+      "listeners": "1171688",
+      "url": "https://www.last.fm/music/AC%2FDC/_/Highway+to+Hell"
+    },
+    {
+      "id": 48,
+      "artistName": "R.E.M.",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Losing My Religion",
+      "listeners": "1352927",
+      "url": "https://www.last.fm/music/R.E.M./_/Losing+My+Religion"
+    },
+    {
+      "id": 49,
+      "artistName": "System of a Down",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Chop Suey!",
+      "listeners": "1658962",
+      "url": "https://www.last.fm/music/System+of+a+Down/_/Chop+Suey%21"
+    },
+    {
+      "id": 50,
+      "artistName": "Hozier",
+      "image": "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "name": "Take Me to Church",
+      "listeners": "885058",
+      "url": "https://www.last.fm/music/Hozier/_/Take+Me+to+Church"
+    },
+    {
+      "name": "Buddy Holly",
+      "artistName": "Weezer",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "listeners": "1131259",
+      "url": "https://www.last.fm/music/Weezer/_/Buddy+Holly",
+      "id": 51
+    },
+    {
+      "name": "Buddy Holly",
+      "artistName": "Weezer",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "listeners": "1131259",
+      "url": "https://www.last.fm/music/Weezer/_/Buddy+Holly",
+      "id": 52
+    },
+    {
+      "name": "Hey There Delilah",
+      "artistName": "Plain White T's",
+      "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "listeners": "1103741",
+      "url": "https://www.last.fm/music/Plain+White+T%27s/_/Hey+There+Delilah",
+      "favourite": true,
+      "id": 53
     }
   ],
   "trenddetails": [],
-  "detailsfav": [],
-  "trenddetailsfav": [],
-  "trenddetailsfav1": [],
   "profile": {
     "name": "typicode"
   }

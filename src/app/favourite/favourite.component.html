@@ -2,7 +2,7 @@
   <div
     class="card col-sm-12 col-md-4 col-lg-3"
     style="width: 18rem"
-    *ngFor="let music of musiclist"
+    *ngFor="let music of musicList"
   >
     <img src="{{ music.image }}" class="card-img-top" alt="..." />
     <div class="card-body">
@@ -13,43 +13,12 @@
       <li class="list-group-item">Listeners : {{ music.listeners }}</li>
     </ul>
     <div class="card-body">
-      <a
-        class="btn btn-outline-success mx-2"
-        (click)="showDetailSearch(music.music)"
+      <a class="btn btn-outline-success mx-2" (click)="showDetail(music)"
         >Details</a
       >
       <button
         class="btn btn-outline-primary mx-2"
-        (click)="remove(music.id)"
-        routerLink="/favs"
-      >
-        Remove
-      </button>
-    </div>
-  </div>
-  <!-- </div> -->
-  <!-- <div class="container-fluid d-flex flex-wrap my-2"> -->
-  <div
-    class="card col-sm-12 col-md-4 col-lg-3"
-    style="width: 18rem"
-    *ngFor="let music of musiclistrend"
-  >
-    <img src="{{ music.image }}" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">{{ music.name }}</h5>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Artist : {{ music.artistName }}</li>
-      <li class="list-group-item">Listeners : {{ music.listeners }}</li>
-    </ul>
-    <div class="card-body">
-      <a class="btn btn-outline-success mx-2" (click)="showDetailTrend(music)"
-        >Details</a
-      >
-      <button
-        class="btn btn-outline-primary mx-2"
-        (click)="removeTrend(music.id)"
-        routerLink="/favs"
+        (click)="removeFromFavourite(music)"
       >
         Remove
       </button>

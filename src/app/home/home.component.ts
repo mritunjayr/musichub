@@ -13,9 +13,15 @@ export class HomeComponent implements OnInit {
   constructor(private musicService: MusicService, private route: Router) {}
 
   ngOnInit() {
-    this.musicService.getTrendMusic().subscribe((data) => {
+    this.loadAllDataFromApi();
+  }
+
+  loadAllDataFromApi() {
+    let id = 1;
+    this.musicService.getTrendMusic().subscribe((data: any) => {
       data.tracks.track.forEach((track) => {
         let data: Music = {
+          id: id,
           artistName: track.artist.name,
           image: track.image[1]["#text"],
           name: track.name,
@@ -24,19 +30,20 @@ export class HomeComponent implements OnInit {
           durations: track.durations,
         };
         this.arrayOfMusic.push(data);
+        this.musicService.saveTrack(data);
+        id++;
       });
     });
   }
 
-  click(value) {
-    this.route.navigateByUrl("/result/" + value);
-  }
   showDetail(music: Music) {
-    this.musicService.setDetailsMusicTrend(music);
-    this.route.navigateByUrl("/details/" + music.name);
+    this.route.navigate(["/details/", music.id]);
   }
-  addToFavsfromTrend(music: Music) {
-    this.musicService.setFavouriteMusicTrends(music);
+  addToFavourite(music: Music) {
+    music.favourite = true;
+    this.musicService.saveTrack(music);
   }
-  searchMusic(name) {}
+  searchMusic(name) {
+    this.route.navigate(["/result/", name]);
+  }
 }

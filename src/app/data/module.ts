@@ -6,4 +6,5 @@ export class Music {
   listeners: number;
   url: string;
   durations?: number;
+  favourite?: boolean;
 }

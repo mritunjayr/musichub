@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MusicService } from "../services/music.service";
 import { Music } from "../data/module";
+import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: "app-music-details",
   templateUrl: "./music-details.component.html",
@@ -8,94 +9,37 @@ import { Music } from "../data/module";
 })
 export class MusicDetailsComponent implements OnInit {
   musicList$: Music[] = [];
-  flag: boolean = false;
+  removed: boolean;
 
-  constructor(private musicService: MusicService) {}
+  constructor(
+    private musicService: MusicService,
+    private activatedRoute: ActivatedRoute
+  ) {}
   ngOnInit() {
-    this.musicService.getDetailsMusic().subscribe((dataArray: any[]) => {
-      dataArray.forEach((data) => {
-        console.info(data);
-        this.musicList$.push({
-          id: data.id,
-          name: data.name,
-          artistName: data.artistName,
-          listeners: data.listeners,
-          image: data.image,
-          url: data.url,
-        });
-      });
-      // this.musicList.map(el => {
-      //   this.musicService.deleteDetails(el.id);
-      // });
-    });
-    this.musicService.getDetailsMusicTrend().subscribe((dataArray: any[]) => {
-      dataArray.forEach((data) => {
-        console.info(data);
-        this.musicList$.push({
-          id: data.id,
-          name: data.name,
-          artistName: data.artistName,
-          listeners: data.listeners,
-          image: data.image,
-          url: data.url,
-        });
-      });
-
-      // this.musicList.map(el => {
-      //   this.musicService.deleteDetailsTrend(el.id);
-      // });
-    });
-    this.musicService
-      .getFavDetailsMusicTrend()
-      .subscribe((dataArray: any[]) => {
-        dataArray.forEach((data) => {
-          console.info(data);
-          this.musicList$.push({
-            id: data.id,
-            name: data.name,
-            artistName: data.artistName,
-            listeners: data.listeners,
-            image: data.image,
-            url: data.url,
-          });
-        });
-        // this.musicList.map(el => {
-        //   this.musicService.deleteFavDetailsTrend(el.id);
-        // });
-      });
-    this.musicService.geFavtDetailsMusic().subscribe((dataArray: any[]) => {
-      dataArray.forEach((data) => {
-        console.info(data);
-        this.musicList$.push({
-          id: data.id,
-          name: data.name,
-          artistName: data.artistName,
-          listeners: data.listeners,
-          image: data.image,
-          url: data.url,
-        });
-      });
-      // this.musicList.map(el => {
-      //   this.musicService.deleteFavDetails(el.id);
-      // });
+    let musicId = this.activatedRoute.snapshot.params.id;
+    this.musicService.getTrack(musicId).subscribe((data: any) => {
+      console.info(data);
+      let music: Music = {
+        id: data.id,
+        name: data.name,
+        artistName: data.artistName,
+        listeners: data.listeners,
+        image: data.image,
+        url: data.url,
+        favourite: data.favourite,
+      };
+      this.musicList$.push(music);
     });
   }
 
-  addToFavFromTrend(music) {
-    this.musicService.setFavouriteMusicTrends(music);
-    this.flag = true;
+  addToFavourite(music: Music) {
+    music.favourite = true;
+    this.musicService.saveTrack(music);
+    this.removed = false;
   }
-  addToFavFromSearch(music) {
-    this.musicService.setFavouriteMusic(music);
-    this.flag = true;
-  }
-
-  removeFromFavSearch(music) {
-    this.musicService.remove(music.id);
-    this.flag = true;
-  }
-  removeFromFavTrend(music) {
-    this.musicService.removeTrend(music.id);
-    this.flag = true;
+  removeFromFavourite(music: Music) {
+    music.favourite = false;
+    this.musicService.saveTrack(music);
+    this.removed = true;
   }
 }

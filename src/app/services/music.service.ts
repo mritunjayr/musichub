@@ -2,7 +2,8 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { Music } from "../data/module";
-import { Observable } from "rxjs";
+
+const URL: string = "http://localhost:3004/tracks";
 
 @Injectable({
   providedIn: "root",
@@ -13,74 +14,26 @@ export class MusicService {
 
   url: string = "http://localhost:3004/posts";
 
-  getTrendMusic(): any {
+  getTrendMusic() {
     return this.http.get(
       `http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=india&api_key=${this.api_key}&format=json`
     );
   }
 
-  getMusic(value): any {
+  getMusic(value) {
     var url = `http://ws.audioscrobbler.com/2.0/?method=track.search&api_key=${this.api_key}&track=${value}&format=json`;
     return this.http.get(url);
   }
-
-  getFavouriteMusic() {
-    return this.http.get("http://localhost:3004/posts");
+  saveTrack(music) {
+    this.http.patch(`${URL}/${music.id}`, music).subscribe();
   }
-  setFavouriteMusic(music) {
-    this.http.post(this.url, music).subscribe();
+  addTrack(music) {
+    return this.http.post(URL, music);
   }
-  remove(id) {
-    this.http.delete(this.url + "/" + id).subscribe();
+  getTrack(id) {
+    return this.http.get(`${URL}/${id}`);
   }
-  getDetailsMusic() {
-    return this.http.get("http://localhost:3004/details");
-  }
-  setDetailsMusic(music) {
-    this.http.post("http://localhost:3004/details", { music }).subscribe();
-  }
-  deleteDetails(data) {
-    this.http.delete("http://localhost:3004/details/" + data).subscribe();
-  }
-  setFavouriteMusicTrends(music: Music) {
-    this.http.post("http://localhost:3004/trends", music).subscribe();
-  }
-  getFavouriteMusicTrends() {
-    return this.http.get("http://localhost:3004/trends");
-  }
-  removeTrend(id) {
-    this.http.delete("http://localhost:3004/trends" + "/" + id).subscribe();
-  }
-  getDetailsMusicTrend() {
-    return this.http.get("http://localhost:3004/trenddetails");
-  }
-  setDetailsMusicTrend(music) {
-    this.http.post("http://localhost:3004/trenddetails", music).subscribe();
-  }
-  deleteDetailsTrend(data) {
-    this.http.delete("http://localhost:3004/trenddetails/" + data).subscribe();
-  }
-
-  getFavDetailsMusicTrend() {
-    return this.http.get("http://localhost:3004/trenddetailsfav");
-  }
-  setFavDetailsMusicTrend(music) {
-    this.http
-      .post("http://localhost:3004/trenddetailsfav", { music })
-      .subscribe();
-  }
-  deleteFavDetailsTrend(data) {
-    this.http
-      .delete("http://localhost:3004/trenddetailsfav/" + data)
-      .subscribe();
-  }
-  geFavtDetailsMusic() {
-    return this.http.get("http://localhost:3004/detailsfav");
-  }
-  setFavDetailsMusic(music) {
-    this.http.post("http://localhost:3004/detailsfav", { music }).subscribe();
-  }
-  deleteFavDetails(data) {
-    this.http.delete("http://localhost:3004/detailsfav/" + data).subscribe();
+  getAllTrack() {
+    return this.http.get(URL);
   }
 }

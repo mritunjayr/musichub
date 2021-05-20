@@ -2,37 +2,53 @@
   class="container-fluid d-flex flex-wrap my-2"
   *ngFor="let music of musicList$"
 >
-  <img src="{{ music.image }}" class="col-6" alt="..." />
-  <div class="col-6">
-    <h2 class="col-12">Name of Track : {{ music.name }}</h2>
+  <div class="col-6 text-center">
+    <img src="{{ music.image }}" class="img-fluid" alt="..." />
+  </div>
+  <div
+    class="
+      col-6
+      d-flex
+      flex-column
+      align-items-center
+      justify-content-start
+      text-left
+    "
+  >
+    <h2 class="w-100">{{ music.name }}</h2>
 
-    <h2 class="col-12">Artist : {{ music.artistName }}</h2>
-    <h2>Listeners : {{ music.listeners }}</h2>
+    <p class="w-100">Artist : {{ music.artistName }}</p>
+    <p class="w-100">Listeners : {{ music.listeners }}</p>
 
-    <div class="card-body col-12">
-      <button
-        class="btn btn-outline-primary mx-2"
-        (click)="addToFavFromSearch(music)"
-      >
-        Add to Favourite
-      </button>
+    <div *ngIf="!music.favourite">
+      <div class="card-body col-12">
+        <button
+          class="btn btn-outline-primary mx-2"
+          (click)="addToFavourite(music)"
+        >
+          Add to Favourite
+        </button>
+      </div>
     </div>
-    <div *ngIf="flag" class="alert alert-success" role="alert">
+
+    <div *ngIf="music.favourite">
+      <div class="card-body col-12">
+        <button
+          class="btn btn-outline-danger mx-2"
+          (click)="removeFromFavourite(music)"
+        >
+          Remove from Favourite
+        </button>
+      </div>
+    </div>
+    <div *ngIf="removed" class="alert alert-danger col-12" role="alert">
+      <h4 class="alert-heading">Success!</h4>
+      <p>You have successfuly removed from your favourite list of track.</p>
+    </div>
+    <div *ngIf="removed == false" class="alert alert-success" role="alert">
       <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully add to your favourite list of track.</p>
-    </div>
-    <div class="card-body col-12">
-      <button
-        class="btn btn-outline-primary mx-2"
-        (click)="removeFromFavSearch(music)"
-      >
-        Remove from Favourite
-      </button>
-    </div>
-    <div *ngIf="flag" class="alert alert-success col-12" role="alert">
-      <h4 class="alert-heading">Success !</h4>
       <p>
-        Aww yeah, you successfully remove from your favourite list of track.
+        Oh yeah, you have successfully added to your favourite list of track.
       </p>
     </div>
   </div>
